@@ -23,8 +23,13 @@ namespace Exercicio10_herança_polimorfismo
                 string name = Console.ReadLine();
                 Console.Write("Price: ");
                 double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                
-                if (type == 'u')
+
+
+                if (type == 'c')
+                {
+                    list.Add(new Product(name, price));
+                }
+                else if (type == 'u')
                 {
                     Console.Write("Manufacture date (DD/MM/YYY): ");
                     DateTime manufactureDate = DateTime.Parse(Console.ReadLine());
@@ -37,10 +42,7 @@ namespace Exercicio10_herança_polimorfismo
                     double customsFee = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     list.Add(new ImportedProduct(name, price, customsFee));
                 }
-                else
-                {
-                    list.Add(new Product(name, price));
-                }
+                
             }
 
             Console.WriteLine();

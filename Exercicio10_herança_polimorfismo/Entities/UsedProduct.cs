@@ -18,7 +18,9 @@ namespace Exercicio10_herança_polimorfismo.Entities
 
         public override string PriceTag()
         {
-            return Name + " (used) $ " + Price.ToString("F2", CultureInfo.InvariantCulture)  + " (Manufacture date: " + ManufactureDate.ToString("dd/MM/yyyy") + ")";
+            return Name + 
+                " (used) $ " + Price.ToString("F2", CultureInfo.InvariantCulture)  + 
+                " (Manufacture date: " + ManufactureDate.ToString("dd/MM/yyyy") + ")";
         }
     }
 }
